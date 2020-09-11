@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://player/Player.gd" type="Script" id=2]
+[ext_resource path="res://music/main_soundtrack.wav" type="AudioStream" id=3]
+[ext_resource path="res://tileset/runs_tileset/ruins_like_tileset.tres" type="TileSet" id=4]
+
+[node name="StageOne" type="Node2D"]
+
+[node name="TileMap2" type="TileMap" parent="."]
+tile_set = ExtResource( 4 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 131089, 21, 0, 262145, 21, 0, 262161, 19, 0, 327697, 20, 0, 393217, 20, 0, 393233, 19, 0, 458753, 20, 0, 458769, 20, 0, 524289, 20, 0, 524305, 20, 0, 589825, 18, 0, 589826, 536870929, 0, 589828, 536870928, 0, 589831, 536870924, 0, 589833, 13, 0, 589834, 536870926, 0, 589835, 536870926, 0, 589836, 536870926, 0, 589837, 536870925, 0, 589839, 536870923, 0, 589841, 18, 0, 589842, 17, 0, 655360, 0, 0, 655361, 25, 0, 655362, 24, 0, 655363, 25, 0, 655364, 24, 0, 655365, 23, 0, 655366, 24, 0, 655367, 25, 0, 655368, 24, 0, 655369, 25, 0, 655370, 24, 0, 655371, 23, 0, 655372, 24, 0, 655373, 25, 0, 655374, 22, 0, 655375, 24, 0, 655376, 23, 0, 655377, 24, 0, 655378, 22, 0, 655379, 26, 0 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 56, 144 )
+script = ExtResource( 2 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+autoplay = true
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 4 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 131089, 21, 0, 262145, 21, 0, 262161, 19, 0, 327697, 20, 0, 393217, 20, 0, 393233, 19, 0, 458753, 20, 0, 458769, 20, 0, 524289, 20, 0, 524305, 20, 0, 589825, 18, 0, 589841, 18, 0, 589842, 17, 0, 655360, 0, 0, 655361, 25, 0, 655362, 24, 0, 655363, 25, 0, 655364, 24, 0, 655365, 23, 0, 655366, 24, 0, 655367, 25, 0, 655368, 24, 0, 655369, 25, 0, 655370, 24, 0, 655371, 23, 0, 655372, 24, 0, 655373, 25, 0, 655374, 22, 0, 655375, 24, 0, 655376, 23, 0, 655377, 24, 0, 655378, 22, 0, 655379, 26, 0 )
